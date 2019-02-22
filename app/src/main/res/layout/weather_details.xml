@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+    android:id="@+id/linearlayout1">
+
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+    android:text="SunsetTime"
+    android:padding="20dp"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/SunsetTimeValue"
+                  android:text="SunsetTimeValue"
+                  android:padding="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/linearlayout2"
+    android:layout_below="@id/linearlayout1">
+
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="SunRiseTime"
+                  android:padding="20dp"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/SunRiseTimeValue"
+                  android:text="SunRiseTimeValue"
+                  android:padding="20dp"/>
+    </LinearLayout>
+</RelativeLayout>

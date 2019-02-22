@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="90dp"
+                  android:orientation="horizontal"
+                  android:id="@+id/linear1">
+
+
+        <Button android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="20dp"
+                android:id="@+id/search_button"
+                android:background="@color/colorWhite"
+                android:text="Refresh"
+        />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linear1">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:visibility="invisible"
+        android:id="@+id/label">
+
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:layout_width="100dp" android:layout_height="wrap_content"
+                          android:id="@+id/day"
+                          android:text="WeekDay"
+                          android:layout_gravity="center"
+                          android:padding="20dp"
+                          android:paddingLeft="20dp"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:layout_width="130dp" android:layout_height="wrap_content"
+                          android:id="@+id/temperatureHigh"
+                          android:text="High"
+                          android:padding="20dp"
+
+                          android:layout_gravity="center"
+                          android:paddingLeft="20dp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="130dp" android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:padding="20dp"
+                          android:layout_gravity="center"
+                          android:id="@+id/temperatureLow"
+                          android:text="Low"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+                android:layout_below="@id/label"
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:visibility="invisible"
+        />
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="20dp"
+                      android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/no_results"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_margin="20dp"
+                    android:text="No results"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorPrimary"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
